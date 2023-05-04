@@ -1,10 +1,10 @@
 const express = require("express");
-const connectDB = require("./config/db");
+const connectDB = require("./backend/config/db");
 const dotenv = require("dotenv");
-const userRoutes = require("./routes/userRoutes");
-const chatRoutes = require("./routes/chatRoutes");
-const messageRoutes = require("./routes/messageRoutes");
-const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const userRoutes = require("./backend/routes/userRoutes");
+const chatRoutes = require("./backend/routes/chatRoutes");
+const messageRoutes = require("./backend/routes/messageRoutes");
+const { notFound, errorHandler } = require("./backend/middleware/errorMiddleware");
 const cors = require("cors");
 const path = require("path");
 
@@ -28,11 +28,11 @@ const __dirname1 = path.resolve();
 
 console.log(process.env.NODE_ENV)
 if (process.env.NODE_ENV == "production") {
-  app.use(express.static(path.join(__dirname1, "../frontend/build")));
+  app.use(express.static(path.join(__dirname1, "./frontend/build")));
 
   app.get("*", (req, res) =>
     res.sendFile(
-      path.resolve(__dirname1, "../", "frontend", "build", "index.html")
+      path.resolve(__dirname1, "./", "frontend", "build", "index.html")
     )
   );
 } else {
