@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run test",
     "test": "nodemon server.js",
-    "build":"npm install && cd ../frontend && npm install --legacy-peer-deps && npm run build"
+    "build":"npm install && cd ./frontend && npm install --legacy-peer-deps && npm run build"
   },
   "repository": {
     "type": "git",
