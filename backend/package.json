@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "npm run test",
-    "test": "nodemon server.js"
+    "test": "nodemon server.js",
+    "build":"cd ../frontend && npm install --legacy-peer-deps && npm run build"
   },
   "repository": {
     "type": "git",
