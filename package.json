@@ -4,9 +4,9 @@
   "description": "Live Chatting App",
   "main": "server.js",
   "scripts": {
-    "start": "npm run test",
+    "start": "yarn run test",
     "test": "nodemon server.js",
-    "build":"npm install && cd ./frontend && npm install --legacy-peer-deps && npm run build"
+    "build":"yarn install && cd ./frontend && yarn install && yarn run build"
   },
   "repository": {
     "type": "git",
